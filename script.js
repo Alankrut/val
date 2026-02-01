@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', () => {
     validateConfig();
 
     // Set texts from config
-    document.getElementById('valentineTitle').textContent = `${config.valentineName},`;
+    document.getElementById('valentineTitle').textContent = `${config.valentineName}, my fav thug`;
     
     // Set first question texts
     document.getElementById('question1Text').textContent = config.questions.first.text;
@@ -181,7 +181,7 @@ function celebrate() {
     
     // Set celebration messages
     document.getElementById('celebrationTitle').textContent = config.celebration.title;
-    document.getElementById('celebrationMessage').textContent = config.celebration.message;
+    // document.getElementById('celebrationMessage').textContent = config.celebration.message;
     document.getElementById('celebrationEmojis').textContent = config.celebration.emojis;
     
     // Create heart explosion effect
