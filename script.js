@@ -187,7 +187,7 @@ function celebrate() {
 
 // Create heart explosion animation
 function createHeartExplosion() {
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 33; i++) {
         const heart = document.createElement('div');
         const randomHeart = config.floatingEmojis.hearts[Math.floor(Math.random() * config.floatingEmojis.hearts.length)];
         heart.innerHTML = randomHeart;
