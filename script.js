@@ -150,27 +150,16 @@ loveMeter.addEventListener('input', () => {
     const value = parseInt(loveMeter.value);
     loveValue.textContent = value;
     
-    if (value > 0) {
-        extraLove.classList.remove('hidden');
-        const overflowPercentage = (value - 100) / 9900;
-        const extraWidth = overflowPercentage * window.innerWidth * 0.8;
-        loveMeter.style.width = `calc(100% + ${extraWidth}px)`;
-        loveMeter.style.transition = 'width 0.3s';
-        
-        // Show different messages based on the value
-        if (value >= 2500) {
-            extraLove.classList.add('super-love');
+    // Show different messages based on the value
+    if (value > 100) {
+        if (value >= 5000) {
             extraLove.textContent = config.loveMessages.extreme;
-        } else if (value > 600) {
-            extraLove.classList.remove('super-love');
+        } else if (value > 1500) {
             extraLove.textContent = config.loveMessages.high;
         } else {
-            extraLove.classList.remove('super-love');
             extraLove.textContent = config.loveMessages.normal;
         }
     } else {
-        extraLove.classList.add('hidden');
-        extraLove.classList.remove('super-love');
         loveMeter.style.width = '100%';
     }
 });
