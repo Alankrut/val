@@ -116,6 +116,12 @@ function setRandomPosition(element) {
 
 // Function to show next question
 function showNextQuestion(questionNumber) {
+    if (questionNumber==2) {
+        document.getElementById('valentineTitle').textContent = `Travis (oops I mean ${config.valentineName}),`;
+    } else {
+        document.getElementById('valentineTitle').textContent = `${config.valentineName},`;
+    }
+
     document.querySelectorAll('.question-section').forEach(q => q.classList.add('hidden'));
     document.getElementById(`question${questionNumber}`).classList.remove('hidden');
 }
@@ -184,6 +190,8 @@ function celebrate() {
     // document.getElementById('celebrationMessage').textContent = config.celebration.message;
     document.getElementById('celebrationEmojis').textContent = config.celebration.emojis;
     
+    document.getElementById('valentineTitle').style.display = 'none';
+
     // Create heart explosion effect
     createHeartExplosion();
 }
