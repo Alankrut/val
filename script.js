@@ -141,8 +141,8 @@ const loveValue = document.getElementById('loveValue');
 const extraLove = document.getElementById('extraLove');
 
 function setInitialPosition() {
-    loveMeter.value = 100;
-    loveValue.textContent = 100;
+    loveMeter.value = 0;
+    loveValue.textContent = 0;
     loveMeter.style.width = '100%';
 }
 
@@ -151,10 +151,10 @@ loveMeter.addEventListener('input', () => {
     loveValue.textContent = value;
     
     // Show different messages based on the value
-    if (value > 100) {
-        if (value >= 5000) {
+    if (value > 0) {
+        if (value >= 60) {
             extraLove.textContent = config.loveMessages.extreme;
-        } else if (value > 1500) {
+        } else if (value > 30) {
             extraLove.textContent = config.loveMessages.high;
         } else {
             extraLove.textContent = config.loveMessages.normal;
