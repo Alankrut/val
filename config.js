@@ -50,7 +50,7 @@ const CONFIG = {
     // Messages that appear after they say "Yes!"
     celebration: {
         title: "Awww! You just made my day! 🥹",  // Title message
-        message: "Now come get your gift! <br>- a big hug 🤗, \n- one bite 🫦, \n- another mood ring 🤪!",
+        message: "Now come get your gift! <br>- a big hug 🤗, \n- one bite 🫦, \n- another mood ring 🤪", // I'm not using this, hardcoded in the html file
         emojis: "🎁♥️🥹🤗😇🙈"  // These will bounce around
     },
 
